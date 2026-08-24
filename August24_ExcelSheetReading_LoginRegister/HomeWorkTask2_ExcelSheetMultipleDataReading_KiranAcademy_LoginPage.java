@@ -16,7 +16,6 @@ public class HomeWorkTask2_ExcelSheetMultipleDataReading_KiranAcademy_LoginPage 
 
         WebDriver driver = new EdgeDriver();
         driver.manage().window().maximize();
-        driver.get("https://javabykiran.com/liveproject/index.html");
 
         FileInputStream fp = new FileInputStream("HomeWorkTask2_ExcelSheetMultipleDataReading_KiranAcademy_LoginPage.xlsx");
 
@@ -26,6 +25,8 @@ public class HomeWorkTask2_ExcelSheetMultipleDataReading_KiranAcademy_LoginPage 
         int rowcount = sh.getPhysicalNumberOfRows();
 
         for (int i = 1; i < rowcount; i++) {
+
+            driver.get("https://javabykiran.com/liveproject/index.html");
 
             Row rr = sh.getRow(i);
 
@@ -50,9 +51,6 @@ public class HomeWorkTask2_ExcelSheetMultipleDataReading_KiranAcademy_LoginPage 
             } else {
                 System.out.println("Login FAILED - with " + usename + " and " + pwd);
             }
-
-            username.clear();
-            pass.clear();
         }
     }
 }

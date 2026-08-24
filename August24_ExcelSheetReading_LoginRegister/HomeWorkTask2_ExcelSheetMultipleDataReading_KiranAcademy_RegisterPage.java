@@ -16,7 +16,6 @@ public class HomeWorkTask2_ExcelSheetMultipleDataReading_KiranAcademy_RegisterPa
 
         WebDriver driver = new EdgeDriver();
         driver.manage().window().maximize();
-        driver.get("https://javabykiran.com/liveproject/pages/examples/register.html");
 
         FileInputStream fp = new FileInputStream("HomeWorkTask2_ExcelSheetMultipleDataReading_KiranAcademy_RegisterPage.xlsx");
 
@@ -26,6 +25,8 @@ public class HomeWorkTask2_ExcelSheetMultipleDataReading_KiranAcademy_RegisterPa
         int rowcount = sh.getPhysicalNumberOfRows();
 
         for (int i = 1; i < rowcount; i++) {
+
+            driver.get("https://javabykiran.com/liveproject/pages/examples/register.html");
 
             Row rr = sh.getRow(i);
 
@@ -60,11 +61,6 @@ public class HomeWorkTask2_ExcelSheetMultipleDataReading_KiranAcademy_RegisterPa
             } else {
                 System.out.println("Register FAILED - with " + name + " and " + email);
             }
-
-            nameField.clear();
-            mobileField.clear();
-            emailField.clear();
-            passField.clear();
         }
     }
 }
