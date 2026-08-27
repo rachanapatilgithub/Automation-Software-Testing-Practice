@@ -1,6 +1,8 @@
 package com.automation;
 
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
+import org.openqa.selenium.NoAlertPresentException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.Select;
 
@@ -42,6 +44,15 @@ public class AddUserBL {
 		driver.findElement(By.id("password")).sendKeys(password);
 
 		driver.findElement(By.id("submit")).click();
+
+		// same site template as Register - accept the success alert if one shows up
+		try {
+			Alert alert = driver.switchTo().alert();
+			System.out.println("Alert - " + alert.getText());
+			alert.accept();
+		} catch (NoAlertPresentException e) {
+			// no alert this time (e.g. negative scenario with blank fields), nothing to do
+		}
 
 		System.out.println("Add User Executed");
 	}
