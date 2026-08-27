@@ -12,6 +12,7 @@ This is a practice log, not a single project - each folder is a small, self-cont
 - JavaScript Executor
 - A first look at Playwright
 - Two small take-home tasks (RedBus site practice)
+- Excel sheet (Apache POI) + properties file driven Login/Register/Add User, plain classwork and a reusable-utility-class version side by side
 
 ## Tech
 Java, Selenium WebDriver, Maven
