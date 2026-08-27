@@ -2,6 +2,7 @@ package com.automation;
 
 import java.io.FileInputStream;
 
+import org.apache.poi.ss.usermodel.DataFormatter;
 import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
@@ -23,13 +24,14 @@ public class ExcelReadTest {
 		Sheet sh = ww.getSheet("Login");
 
 		int rowcount = sh.getPhysicalNumberOfRows();
+		DataFormatter df = new DataFormatter();
 
 		for (int i = 1; i < rowcount; i++) {
 
 			Row rr = sh.getRow(i);
 
-			String usename = rr.getCell(0).getStringCellValue();
-			String pwd = rr.getCell(1).getStringCellValue();
+			String usename = df.formatCellValue(rr.getCell(0));
+			String pwd = df.formatCellValue(rr.getCell(1));
 
 			//System.out.println("Username is - " + usename);
 			//System.out.println("Password is - " + pwd);

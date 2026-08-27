@@ -3,6 +3,7 @@ package com.automation;
 import java.io.FileInputStream;
 import java.util.Properties;
 
+import org.apache.poi.ss.usermodel.DataFormatter;
 import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
@@ -42,6 +43,7 @@ public class RegisterTest {
 		Sheet sh = ww.getSheet("Register");
 
 		int rowcount = sh.getPhysicalNumberOfRows();
+		DataFormatter df = new DataFormatter();
 
 		for (int i = 1; i < rowcount; i++) {
 
@@ -50,10 +52,10 @@ public class RegisterTest {
 
 			Row rr = sh.getRow(i);
 
-			String name = rr.getCell(0).getStringCellValue();
-			String mobile = rr.getCell(1).getStringCellValue();
-			String email = rr.getCell(2).getStringCellValue();
-			String pwd = rr.getCell(3).getStringCellValue();
+			String name = df.formatCellValue(rr.getCell(0));
+			String mobile = df.formatCellValue(rr.getCell(1));
+			String email = df.formatCellValue(rr.getCell(2));
+			String pwd = df.formatCellValue(rr.getCell(3));
 
 			WebElement nameField = driver.findElement(By.id("name"));
 			nameField.sendKeys(name);

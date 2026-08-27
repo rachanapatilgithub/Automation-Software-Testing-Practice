@@ -2,6 +2,7 @@ package com.automation;
 
 import java.util.Properties;
 
+import org.apache.poi.ss.usermodel.DataFormatter;
 import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.ss.usermodel.Sheet;
 import org.openqa.selenium.By;
@@ -25,6 +26,7 @@ public class RegisterTest {
 	public static void register(WebDriver driver, String registerpageurl) throws Exception {
 		Sheet sh = Utility.getSheet("Register");
 		int rowcount = sh.getPhysicalNumberOfRows();
+		DataFormatter df = new DataFormatter();
 
 		for (int i = 1; i < rowcount; i++) {
 
@@ -32,10 +34,10 @@ public class RegisterTest {
 			driver.get(registerpageurl);
 
 			Row rr = sh.getRow(i);
-			String name = rr.getCell(0).getStringCellValue();
-			String mobile = rr.getCell(1).getStringCellValue();
-			String email = rr.getCell(2).getStringCellValue();
-			String pwd = rr.getCell(3).getStringCellValue();
+			String name = df.formatCellValue(rr.getCell(0));
+			String mobile = df.formatCellValue(rr.getCell(1));
+			String email = df.formatCellValue(rr.getCell(2));
+			String pwd = df.formatCellValue(rr.getCell(3));
 
 			WebElement nameField = driver.findElement(By.id("name"));
 			nameField.sendKeys(name);

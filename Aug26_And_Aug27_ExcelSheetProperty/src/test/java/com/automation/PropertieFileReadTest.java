@@ -3,6 +3,7 @@ package com.automation;
 import java.io.FileInputStream;
 import java.util.Properties;
 
+import org.apache.poi.ss.usermodel.DataFormatter;
 import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
@@ -42,9 +43,10 @@ public class PropertieFileReadTest {
 		Sheet sh = ww.getSheet("Login");
 
 		Row rr = sh.getRow(1);
+		DataFormatter df = new DataFormatter();
 
-		String username = rr.getCell(0).getStringCellValue();
-		String pwd = rr.getCell(1).getStringCellValue();
+		String username = df.formatCellValue(rr.getCell(0));
+		String pwd = df.formatCellValue(rr.getCell(1));
 
 		WebElement usernameField = driver.findElement(By.id("email"));
 		usernameField.sendKeys(username);

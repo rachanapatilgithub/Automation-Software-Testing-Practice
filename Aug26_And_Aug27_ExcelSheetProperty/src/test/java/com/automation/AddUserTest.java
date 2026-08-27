@@ -3,6 +3,7 @@ package com.automation;
 import java.io.FileInputStream;
 import java.util.Properties;
 
+import org.apache.poi.ss.usermodel.DataFormatter;
 import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
@@ -59,6 +60,7 @@ public class AddUserTest {
 		Sheet sh = ww.getSheet("AddUser");
 
 		int rowcount = sh.getPhysicalNumberOfRows();
+		DataFormatter df = new DataFormatter();
 
 		for (int i = 1; i < rowcount; i++) {
 
@@ -66,13 +68,13 @@ public class AddUserTest {
 
 			Row rr = sh.getRow(i);
 
-			String username = rr.getCell(0).getStringCellValue();
-			String mobile = rr.getCell(1).getStringCellValue();
-			String useremail = rr.getCell(2).getStringCellValue();
-			String course = rr.getCell(3).getStringCellValue();
-			String gender = rr.getCell(4).getStringCellValue();
-			String state = rr.getCell(5).getStringCellValue();
-			String pwd = rr.getCell(6).getStringCellValue();
+			String username = df.formatCellValue(rr.getCell(0));
+			String mobile = df.formatCellValue(rr.getCell(1));
+			String useremail = df.formatCellValue(rr.getCell(2));
+			String course = df.formatCellValue(rr.getCell(3));
+			String gender = df.formatCellValue(rr.getCell(4));
+			String state = df.formatCellValue(rr.getCell(5));
+			String pwd = df.formatCellValue(rr.getCell(6));
 
 			driver.findElement(By.id("username")).sendKeys(username);
 			driver.findElement(By.id("mobile")).sendKeys(mobile);
