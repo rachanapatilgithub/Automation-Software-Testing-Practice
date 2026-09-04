@@ -1,0 +1,3 @@
+This is a second fake/dummy file created only for Selenium multi-file-upload practice.
+Used together with SampleUploadFile.txt on:
+- https://qaplayground.com/practice/file-upload (Scenario 2: Upload Multiple Files)

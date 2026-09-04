@@ -1,0 +1,5 @@
+This is a fake/dummy file created only for Selenium file-upload practice.
+It has no real content — used to test attach-file functionality on:
+- https://demoqa.com/upload-download
+- https://practice-automation.com/file-upload/
+- https://qaplayground.com/practice/file-upload
