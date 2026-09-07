@@ -1,0 +1,38 @@
+SELENIUM WAITS - NOTES
+======================
+
+1. IMPLICIT WAIT
+   - driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(n));
+   - Applies to the WHOLE driver session, for every findElement/findElements call.
+   - Only waits for an element to be PRESENT in the DOM. Does NOT check visibility,
+     clickability, or text.
+   - Simple to set up, but hides how long each individual step actually needs to wait.
+   - Related timeout methods on the same driver.manage().timeouts():
+       pageLoadTimeout(Duration)  -> max time to wait for a full page load
+       scriptTimeout(Duration)    -> max time to wait for an async script to finish
+
+2. EXPLICIT WAIT
+   - WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(n));
+     wait.until(ExpectedConditions.<condition>(...));
+   - Waits for ONE specific condition on ONE specific element, only where it is used.
+   - Common ExpectedConditions methods:
+       visibilityOfElementLocated(By)          -> element present AND visible
+       invisibilityOfElementLocated(By)        -> element hidden or removed
+       presenceOfElementLocated(By)            -> element present in DOM (visible or not)
+       elementToBeClickable(By)                -> element visible AND enabled
+       textToBePresentInElementLocated(By,txt) -> element's text contains given text
+   - Preferred over implicit wait because it is precise and self-documenting.
+
+3. FLUENT WAIT
+   - Wait<WebDriver> wait = new FluentWait<>(driver)
+         .withTimeout(Duration.ofSeconds(n))
+         .pollingEvery(Duration.ofSeconds(p))
+         .ignoring(NoSuchElementException.class);
+     wait.until(driver -> ... custom boolean condition ...);
+   - Like explicit wait, but lets you control the polling frequency and which
+     exceptions to ignore while polling (e.g. NoSuchElementException).
+   - Best for custom conditions that ExpectedConditions does not already cover.
+
+RULE OF THUMB
+   - Don't mix implicit wait and explicit wait on the same driver - it can cause
+     unpredictable/slow waits. Pick one style (usually explicit/fluent) per test.
