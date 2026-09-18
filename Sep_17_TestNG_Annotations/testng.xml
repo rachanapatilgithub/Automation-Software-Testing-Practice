@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="AdminLTETesting">
+  
+  <test name="Login Test">
+    <classes>
+      <class name="com.automation.LoginTest"/>
+    </classes>
+  </test> <!-- Login Test -->
+  
+  <test name="Register Test">
+    <classes>
+      <class name="com.automation.RegisterTest"/>
+    </classes>
+  </test> <!-- Register Test -->
+
+  <test name="Add User Test">
+    <classes>
+      <class name="com.automation.HomeWorkTask_AddUserTest"/>
+    </classes>
+  </test> <!-- Add User Test -->
+
+</suite> <!-- Suite -->

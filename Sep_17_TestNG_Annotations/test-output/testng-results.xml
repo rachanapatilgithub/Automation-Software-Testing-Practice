@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="5" passed="3" failed="2" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2026-09-18T13:01:17 IST" name="AdminLTETesting" finished-at="2026-09-18T13:03:11 IST" duration-ms="114112">
+    <groups>
+    </groups>
+    <test started-at="2026-09-18T13:01:17 IST" name="Login Test" finished-at="2026-09-18T13:02:19 IST" duration-ms="62023">
+      <class name="com.automation.LoginTest">
+        <test-method is-config="true" signature="openBrowser()[pri:0, instance:com.automation.LoginTest@6572421]" started-at="2026-09-18T13:01:17 IST" name="openBrowser" finished-at="2026-09-18T13:01:45 IST" duration-ms="27442" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openBrowser -->
+        <test-method signature="loginPositiveTest()[pri:1, instance:com.automation.LoginTest@6572421]" started-at="2026-09-18T13:01:45 IST" name="loginPositiveTest" finished-at="2026-09-18T13:01:47 IST" duration-ms="2038" status="FAIL">
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id="form"]/div[3]/div/div/button"}
+  (Session info: MicrosoftEdge=153.0.4234.32)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
+Build info: version: '4.40.0', revision: 'b3333f1'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.6'
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Command: [c960899bbb5000891b84479d66a0fa9c, findElement {using=xpath, value=//*[@id="form"]/div[3]/div/div/button}]
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 153.0.4234.32, fedcm:accounts: true, goog:processID: 14264, ms:edgeOptions: {debuggerAddress: localhost:17751}, msedge: {msedgedriverVersion: 153.0.4234.32 (9aab8632678b..., userDataDir: C:\Users\racha\AppData\Loca...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:17751/devtoo..., se:cdpVersion: 153.0.4234.32, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:cmtgKey: true, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: c960899bbb5000891b84479d66a0fa9c]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id="form"]/div[3]/div/div/button"}
+  (Session info: MicrosoftEdge=153.0.4234.32)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
+Build info: version: '4.40.0', revision: 'b3333f1'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.6'
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Command: [c960899bbb5000891b84479d66a0fa9c, findElement {using=xpath, value=//*[@id="form"]/div[3]/div/div/button}]
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 153.0.4234.32, fedcm:accounts: true, goog:processID: 14264, ms:edgeOptions: {debuggerAddress: localhost:17751}, msedge: {msedgedriverVersion: 153.0.4234.32 (9aab8632678b..., userDataDir: C:\Users\racha\AppData\Loca...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:17751/devtoo..., se:cdpVersion: 153.0.4234.32, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:cmtgKey: true, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: c960899bbb5000891b84479d66a0fa9c
+at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:169)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:142)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:223)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:601)
+at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:166)
+at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:424)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:418)
+at com.automation.LoginTest.loginPositiveTest(LoginTest.java:32)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:819)
+at org.testng.TestRunner.run(TestRunner.java:619)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
+at org.testng.TestNG.runSuites(TestNG.java:1134)
+at org.testng.TestNG.run(TestNG.java:1101)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginPositiveTest -->
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:com.automation.LoginTest@6572421]" started-at="2026-09-18T13:01:47 IST" name="closeBrowser" finished-at="2026-09-18T13:01:49 IST" duration-ms="2069" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+        <test-method is-config="true" signature="openBrowser()[pri:0, instance:com.automation.LoginTest@6572421]" started-at="2026-09-18T13:01:49 IST" name="openBrowser" finished-at="2026-09-18T13:02:01 IST" duration-ms="11982" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openBrowser -->
+        <test-method signature="loginIncorrectemailTest()[pri:2, instance:com.automation.LoginTest@6572421]" started-at="2026-09-18T13:02:01 IST" name="loginIncorrectemailTest" finished-at="2026-09-18T13:02:02 IST" duration-ms="1083" status="FAIL">
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id="form"]/div[3]/div/div/button"}
+  (Session info: MicrosoftEdge=153.0.4234.32)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
+Build info: version: '4.40.0', revision: 'b3333f1'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.6'
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Command: [9c04f3b8adcdcb65c7d3bf271a6c0ee1, findElement {using=xpath, value=//*[@id="form"]/div[3]/div/div/button}]
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 153.0.4234.32, fedcm:accounts: true, goog:processID: 15148, ms:edgeOptions: {debuggerAddress: localhost:33402}, msedge: {msedgedriverVersion: 153.0.4234.32 (9aab8632678b..., userDataDir: C:\Users\racha\AppData\Loca...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:33402/devtoo..., se:cdpVersion: 153.0.4234.32, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:cmtgKey: true, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 9c04f3b8adcdcb65c7d3bf271a6c0ee1]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id="form"]/div[3]/div/div/button"}
+  (Session info: MicrosoftEdge=153.0.4234.32)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
+Build info: version: '4.40.0', revision: 'b3333f1'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.6'
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Command: [9c04f3b8adcdcb65c7d3bf271a6c0ee1, findElement {using=xpath, value=//*[@id="form"]/div[3]/div/div/button}]
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 153.0.4234.32, fedcm:accounts: true, goog:processID: 15148, ms:edgeOptions: {debuggerAddress: localhost:33402}, msedge: {msedgedriverVersion: 153.0.4234.32 (9aab8632678b..., userDataDir: C:\Users\racha\AppData\Loca...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:33402/devtoo..., se:cdpVersion: 153.0.4234.32, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:cmtgKey: true, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 9c04f3b8adcdcb65c7d3bf271a6c0ee1
+at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:169)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:142)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:223)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:601)
+at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:166)
+at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:424)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:418)
+at com.automation.LoginTest.loginIncorrectemailTest(LoginTest.java:44)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:819)
+at org.testng.TestRunner.run(TestRunner.java:619)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
+at org.testng.TestNG.runSuites(TestNG.java:1134)
+at org.testng.TestNG.run(TestNG.java:1101)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginIncorrectemailTest -->
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:com.automation.LoginTest@6572421]" started-at="2026-09-18T13:02:02 IST" name="closeBrowser" finished-at="2026-09-18T13:02:03 IST" duration-ms="1387" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+        <test-method is-config="true" signature="openBrowser()[pri:0, instance:com.automation.LoginTest@6572421]" started-at="2026-09-18T13:02:03 IST" name="openBrowser" finished-at="2026-09-18T13:02:09 IST" duration-ms="5255" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openBrowser -->
+        <test-method signature="loginIncorrectpwdTest()[pri:3, instance:com.automation.LoginTest@6572421]" started-at="2026-09-18T13:02:09 IST" name="loginIncorrectpwdTest" finished-at="2026-09-18T13:02:18 IST" duration-ms="9434" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginIncorrectpwdTest -->
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:com.automation.LoginTest@6572421]" started-at="2026-09-18T13:02:18 IST" name="closeBrowser" finished-at="2026-09-18T13:02:19 IST" duration-ms="1112" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+      </class> <!-- com.automation.LoginTest -->
+    </test> <!-- Login Test -->
+    <test started-at="2026-09-18T13:02:20 IST" name="Register Test" finished-at="2026-09-18T13:02:42 IST" duration-ms="22515">
+      <class name="com.automation.RegisterTest">
+        <test-method is-config="true" signature="openBrowser()[pri:0, instance:com.automation.RegisterTest@765d7657]" started-at="2026-09-18T13:02:20 IST" name="openBrowser" finished-at="2026-09-18T13:02:25 IST" duration-ms="5286" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openBrowser -->
+        <test-method signature="registerUserTest()[pri:0, instance:com.automation.RegisterTest@765d7657]" started-at="2026-09-18T13:02:25 IST" name="registerUserTest" finished-at="2026-09-18T13:02:37 IST" duration-ms="11884" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- registerUserTest -->
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:com.automation.RegisterTest@765d7657]" started-at="2026-09-18T13:02:37 IST" name="closeBrowser" finished-at="2026-09-18T13:02:42 IST" duration-ms="5279" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+      </class> <!-- com.automation.RegisterTest -->
+    </test> <!-- Register Test -->
+    <test started-at="2026-09-18T13:02:43 IST" name="Add User Test" finished-at="2026-09-18T13:03:11 IST" duration-ms="28783">
+      <class name="com.automation.HomeWorkTask_AddUserTest">
+        <test-method is-config="true" signature="openBrowser()[pri:0, instance:com.automation.HomeWorkTask_AddUserTest@30c15d8b]" started-at="2026-09-18T13:02:43 IST" name="openBrowser" finished-at="2026-09-18T13:02:54 IST" duration-ms="11733" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openBrowser -->
+        <test-method signature="addUserTest()[pri:0, instance:com.automation.HomeWorkTask_AddUserTest@30c15d8b]" started-at="2026-09-18T13:02:54 IST" name="addUserTest" finished-at="2026-09-18T13:03:09 IST" duration-ms="14468" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addUserTest -->
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:com.automation.HomeWorkTask_AddUserTest@30c15d8b]" started-at="2026-09-18T13:03:09 IST" name="closeBrowser" finished-at="2026-09-18T13:03:11 IST" duration-ms="2557" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+      </class> <!-- com.automation.HomeWorkTask_AddUserTest -->
+    </test> <!-- Add User Test -->
+  </suite> <!-- AdminLTETesting -->
+</testng-results>
