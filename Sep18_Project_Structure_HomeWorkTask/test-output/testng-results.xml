@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="3" passed="2" failed="1" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2026-09-19T21:17:42 IST" name="Suite" finished-at="2026-09-19T21:18:19 IST" duration-ms="36825">
+    <groups>
+    </groups>
+    <test started-at="2026-09-19T21:17:42 IST" name="Test" finished-at="2026-09-19T21:18:19 IST" duration-ms="36825">
+      <class name="com.test.RegisterTest">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.test.RegisterTest@30c15d8b]" started-at="2026-09-19T21:17:55 IST" name="setup" finished-at="2026-09-19T21:18:01 IST" duration-ms="6294" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="validRegisterTest()[pri:0, instance:com.test.RegisterTest@30c15d8b]" started-at="2026-09-19T21:18:01 IST" name="validRegisterTest" finished-at="2026-09-19T21:18:02 IST" duration-ms="934" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validRegisterTest -->
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:com.test.RegisterTest@30c15d8b]" started-at="2026-09-19T21:18:02 IST" name="closeBrowser" finished-at="2026-09-19T21:18:03 IST" duration-ms="480" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+      </class> <!-- com.test.RegisterTest -->
+      <class name="com.test.AddUserTest">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.test.AddUserTest@5e0e82ae]" started-at="2026-09-19T21:18:03 IST" name="setup" finished-at="2026-09-19T21:18:06 IST" duration-ms="2948" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="validAddUserTest()[pri:0, instance:com.test.AddUserTest@5e0e82ae]" started-at="2026-09-19T21:18:06 IST" name="validAddUserTest" finished-at="2026-09-19T21:18:18 IST" duration-ms="12512" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validAddUserTest -->
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:com.test.AddUserTest@5e0e82ae]" started-at="2026-09-19T21:18:18 IST" name="closeBrowser" finished-at="2026-09-19T21:18:19 IST" duration-ms="470" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+      </class> <!-- com.test.AddUserTest -->
+      <class name="com.test.LoginTest">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.test.LoginTest@42a48628]" started-at="2026-09-19T21:17:42 IST" name="setup" finished-at="2026-09-19T21:17:53 IST" duration-ms="11603" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="validLoginTest()[pri:0, instance:com.test.LoginTest@42a48628]" started-at="2026-09-19T21:17:53 IST" name="validLoginTest" finished-at="2026-09-19T21:17:54 IST" duration-ms="914" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [JavaByKiran | Dashboard] but found [JavaByKiran | Log in]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [JavaByKiran | Dashboard] but found [JavaByKiran | Log in]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1578)
+at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+at org.testng.Assert.assertEquals(Assert.java:132)
+at org.testng.Assert.assertEquals(Assert.java:656)
+at org.testng.Assert.assertEquals(Assert.java:666)
+at com.test.LoginTest.validLoginTest(LoginTest.java:34)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validLoginTest -->
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:com.test.LoginTest@42a48628]" started-at="2026-09-19T21:17:54 IST" name="closeBrowser" finished-at="2026-09-19T21:17:55 IST" duration-ms="544" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+      </class> <!-- com.test.LoginTest -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+</testng-results>
