@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="Suite">
+  <test name="Functional Test">
+    <groups>
+      <run>
+        <include name="sanity"/>
+        <include name="smoke"/>
+        <!-- <exclude name="some_group_name"/> -->
+      </run>
+    </groups>
+    <classes>
+      <class name="com.automation.TestNGroups"/>
+    </classes>
+  </test>
+</suite>

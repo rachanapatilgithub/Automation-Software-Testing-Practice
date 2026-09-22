@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<suite parallel="false" name="Suite">
+  <parameter name="brname" value="edge"/>
+  <parameter name="loginurl" value="https://javabykiran.com/liveproject/index.html"/>
+  
+  <test name="Test">
+    <classes>
+      <class name="com.automation.LoginTest"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

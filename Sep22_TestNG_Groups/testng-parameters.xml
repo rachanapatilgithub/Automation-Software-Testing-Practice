@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<suite parallel="false" name="Suite">
+  <parameter name="value1" value="10"/>
+  <parameter name="value2" value="20"/>
+  <test name="Test">
+    <classes>
+      <class name="com.automation.ParameterTest"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
